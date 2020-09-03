@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="navigationbar">
+        <li><a href="home">HOME</a></li>
+        <li><a href="band">BAND</a></li>
+        <li><a href="tour">TOUR</a></li>
+        <li><a href="contact">CONTACT</a></li>
+        <div class="dropdown">
+            <button class="dropbtn">More</button>
+            <div class="dropdown-content">
+            <a href="#">Merchandise</a>
+            <a href="#">Extras</a>
+            <a href="#">Media</a>
+           
+            </div>
+          </div>
+          </ul>
+          <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <img src="chicago.jpg" style="width:100%">
+              <div class="text"><h3>Chicago</h3></div>
+              <p class="text">Thank you, Chicago - A night we won't forget.</p>
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="la.jpg" style="width:100%">
+              <div class="text"><h3>Los Angeles</h3></div>
+              <p class="text">We had the best time playing at Venice Beach!
+
+              </p>
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="ny.jpg" style="width:100%">
+              <div class="text"><h3>New York</h3></div>
+              <p class="text" >The atmosphere in New York is lorem ipsum.</p>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+            </div>
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                </script>
+                <div class="container">
+                  <h2>THE BAND</h2>
+                  <p><i>We love music</i></p>
+                  <p>We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <div class="containerpic">
+                    <div class="pic1">
+                      <p>Name</p>
+                      <img src="bandmember.jpg" alt="Random Name" class="pic2">
+                    </div>
+                    <div class="pic1">
+                      <p>Name</p>
+                      <img src="bandmember.jpg" alt="Random Name" class="pic2">
+                    </div>
+                    <div class="pic1">
+                      <p>Name</p>
+                      <img src="bandmember.jpg" alt="Random Name" class="pic2">
+                    </div>
+                  </div>
+
+                  </div>
+                  <!--tour section-->
+                  
+                  <div class="outer">
+                      <div class="inner">
+                      
+                        <h2 class="tickets">TOUR DATES</h2>
+                        <p><i>Remember to book your tickets!</i></p>
+                        <br>
+                        <ul>
+                        <li class="year">September <span class="span">Sold out</span></li>
+                        <li class="year">October <span class="span">Sold out</span></li>
+                        <li class="year">November <span class="span1">3</span></li>
+                        </ul>
+                      
+
+                      </div>
+                      
+                      
+                      <!-- <div class="image">
+                        <img src="newyork.jpg" alt="newyork" id="rat">
+                        <div class="rt">
+                          <p>NewYork</p>
+                          <p>Fri 27 Nov 2016</p>
+                          <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                          <button onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+                        </div>
+                        
+                      </div>
+                      <div class="image">
+                        <img src="paris.jpg" alt="newyork" id="rat">
+                        <div class="rt">
+                          <p>Paris</p>
+                          <p>Sat 28 Nov 2016</p>
+                          <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                          <button onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+                        </div>
+                        
+                      </div>
+                      <div class="image">
+                        <img src="sanfran.jpg" alt="newyork" id="rat">
+                        <div class="rt">
+                          <p>San Fransico</p>
+                          <p>Sun 29 Nov 2016</p>
+                          <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                          <button onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+                        </div> -->
+                        
+                      </div>
+                    
+
+
+                  </div>
+
+
+
+                
+              
+
+    
+</body>
+</html>
